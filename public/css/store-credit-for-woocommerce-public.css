@@ -1,0 +1,275 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+#pi-store-credit-email-form-container {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10000000;
+    background: rgba(100, 100, 100, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pi-store-credit-email-form-header {
+    display: flex;
+    align-items: center;
+    background: #f00;
+    color: #fff;
+    padding: 10px;
+}
+
+#pi-store-credit-email-form-main {
+    background: #fff;
+}
+
+#pi-store-credit-email-form {
+    display: flex;
+    margin-top: 20px;
+    padding: 20px;
+}
+
+.pi-close {
+    margin-left: auto;
+    margin-right: 0px;
+}
+
+#sc_coupon,
+#sc_billing_email {
+    margin-right: 5px;
+}
+
+/** tooltip */
+.store-credit-table {
+    overflow: auto !important;
+}
+
+.pisol-tooltip {
+    display: inline-block;
+    vertical-align: middle;
+    width: 30px;
+    text-align: center;
+    margin: 0 !important;
+    background: #000;
+    color: #fff;
+    border-radius: 30px;
+}
+
+[tooltip] {
+    position: relative
+}
+
+[tooltip]::after,
+[tooltip]::before {
+    text-transform: none;
+    font-size: .9em;
+    line-height: 1;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    position: absolute;
+    display: none;
+    opacity: 0
+}
+
+[tooltip]::before {
+    content: '';
+    border: 5px solid transparent;
+    z-index: 1001
+}
+
+[tooltip]::after {
+    content: attr(tooltip);
+    line-height: 1.5;
+    text-align: center;
+    width: 200px;
+    max-width: 200px;
+    white-space: pre-wrap;
+    overflow: hidden;
+    padding: 1ch 1.5ch;
+    border-radius: .3ch;
+    box-shadow: 0 1em 2em -.5em rgba(0, 0, 0, .35);
+    background: #333;
+    color: #fff;
+    z-index: 100000000
+}
+
+[tooltip]:hover::after,
+[tooltip]:hover::before {
+    display: block
+}
+
+[tooltip='']::after,
+[tooltip='']::before {
+    display: none !important
+}
+
+[tooltip]:not([flow])::before,
+[tooltip][flow^=up]::before {
+    bottom: 100%;
+    border-bottom-width: 0;
+    border-top-color: #333
+}
+
+[tooltip]:not([flow])::after,
+[tooltip][flow^=up]::after {
+    bottom: calc(100% + 5px)
+}
+
+[tooltip]:not([flow])::after,
+[tooltip]:not([flow])::before,
+[tooltip][flow^=up]::after,
+[tooltip][flow^=up]::before {
+    left: 50%;
+    -webkit-transform: translate(-50%, -.5em);
+    transform: translate(-50%, -.5em)
+}
+
+[tooltip][flow^=down]::before {
+    top: 100%;
+    border-top-width: 0;
+    border-bottom-color: #333
+}
+
+[tooltip][flow^=down]::after {
+    top: calc(100% + 5px)
+}
+
+[tooltip][flow^=down]::after,
+[tooltip][flow^=down]::before {
+    left: 50%;
+    -webkit-transform: translate(-50%, .5em);
+    transform: translate(-50%, .5em)
+}
+
+[tooltip][flow^=left]::before {
+    top: 50%;
+    border-right-width: 0;
+    border-left-color: #333;
+    left: calc(0em - 5px);
+    -webkit-transform: translate(-.5em, -50%);
+    transform: translate(-.5em, -50%)
+}
+
+[tooltip][flow^=left]::after {
+    top: 50%;
+    right: calc(100% + 5px);
+    -webkit-transform: translate(-.5em, -50%);
+    transform: translate(-.5em, -50%)
+}
+
+[tooltip][flow^=right]::before {
+    top: 50%;
+    border-left-width: 0;
+    border-right-color: #333;
+    right: calc(0em - 5px);
+    -webkit-transform: translate(.5em, -50%);
+    transform: translate(.5em, -50%)
+}
+
+[tooltip][flow^=right]::after {
+    top: 50%;
+    left: calc(100% + 5px);
+    -webkit-transform: translate(.5em, -50%);
+    transform: translate(.5em, -50%)
+}
+
+@-webkit-keyframes tooltips-vert {
+    to {
+        opacity: .9;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0)
+    }
+}
+
+@keyframes tooltips-vert {
+    to {
+        opacity: .9;
+        -webkit-transform: translate(-50%, 0);
+        transform: translate(-50%, 0)
+    }
+}
+
+@-webkit-keyframes tooltips-horz {
+    to {
+        opacity: .9;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%)
+    }
+}
+
+@keyframes tooltips-horz {
+    to {
+        opacity: .9;
+        -webkit-transform: translate(0, -50%);
+        transform: translate(0, -50%)
+    }
+}
+
+[tooltip]:not([flow]):hover::after,
+[tooltip]:not([flow]):hover::before,
+[tooltip][flow^=down]:hover::after,
+[tooltip][flow^=down]:hover::before,
+[tooltip][flow^=up]:hover::after,
+[tooltip][flow^=up]:hover::before {
+    -webkit-animation: tooltips-vert .3s ease-out forwards;
+    animation: tooltips-vert .3s ease-out forwards
+}
+
+[tooltip][flow^=left]:hover::after,
+[tooltip][flow^=left]:hover::before,
+[tooltip][flow^=right]:hover::after,
+[tooltip][flow^=right]:hover::before {
+    -webkit-animation: tooltips-horz .3s ease-out forwards;
+    animation: tooltips-horz .3s ease-out forwards
+}
+
+/* end tooltip */
+
+.pi-selectable {
+    -webkit-touch-callout: all;
+    /* iOS Safari */
+    -webkit-user-select: all;
+    /* Safari */
+    -khtml-user-select: all;
+    /* Konqueror HTML */
+    -moz-user-select: all;
+    /* Firefox */
+    -ms-user-select: all;
+    /* Internet Explorer/Edge */
+    user-select: all;
+    /* Chrome and Opera */
+
+}
+
+.store-credit-form-container .sc-form-field {
+    display: block;
+    margin-bottom: 20px;
+}
+
+.store-credit-form-container .sc-form-field label {
+    font-weight: bold;
+}
+
+#sc-price-container {
+    margin-top: 30px;
+}
+
+.store-credit-form-container .sc-form-field select,
+.store-credit-form-container .sc-form-field select {
+    width: 100%;
+    padding: 15px 18px;
+}
+
+.store-credit-form-container .sc-form-field .sc-subtitle {
+    font-size: 14px;
+    margin-top: 4px;
+    color: #ccc;
+}

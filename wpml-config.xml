@@ -1,0 +1,10 @@
+<wpml-config>
+    <admin-texts>
+        <key name="pi_store_credit_email_subject"/>
+        <key name="pi_store_credit_email_header"/>
+        <key name="pi_store_credit_email_top_desc"/>
+        <key name="pi_store_credit_email_read_more_url"/>
+        <key name="pi_store_credit_email_read_more"/>
+        <key name="pi_store_credit_email_bottom_desc"/>
+    </admin-texts>
+</wpml-config>

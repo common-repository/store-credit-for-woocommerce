@@ -1,0 +1,48 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+#store_credit_detail_table {
+    margin: auto;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    display: table;
+    border: 1px solid #ccc;
+}
+
+#store_credit_detail_table td,
+#store_credit_detail_table th {
+    padding: 8px 8px;
+    display: table-cell;
+    text-align: center;
+    vertical-align: top;
+
+}
+
+#store_credit_detail_table tr:nth-child(1) {
+    background-color: #F00 !important;
+    color: #fff;
+}
+
+#store_credit_detail_table tr:nth-child(even) {
+    background-color: #E7E9EB;
+}
+
+#store_credit_detail_table tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+#woocommerce-product-data ul.wc-tabs li.pi_store_credit_option_options a:before,
+#woocommerce-product-data ul.wc-tabs li.pi_store_credit_range_options a:before {
+    font-family: WooCommerce !important;
+    content: '\e01e' !important;
+}
+
+a:disabled{
+    background-color: #ccc;
+    color: #000;
+    opacity: 0.5;
+}
